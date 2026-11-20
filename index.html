@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WGIH - World Geospatial Information Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-left">
+                <div class="logo-section">
+                    <img src="images/wgih-logo.png" alt="WGIH Logo" class="logo">
+                    <div class="logo-text">
+                        <div class="org-name">WGIH</div>
+                        <div class="org-subtitle">World Geospatial<br>Information Home</div>
+                    </div>
+                </div>
+                <div class="tagline">Connect the World • Empower the Future</div>
+            </div>
+
+            <div class="header-right">
+                <div class="language-selector">
+                    <i class="fas fa-globe"></i>
+                    <select>
+                        <option>English</option>
+                        <option>中文</option>
+                        <option>Español</option>
+                    </select>
+                </div>
+                <div class="auth-buttons">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="register-btn">Register</a>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search WGIH...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <button class="nav-toggle" type="button" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-item active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="solutions.html" class="nav-item"><i class="fas fa-satellite"></i> Space & Geospatial Solutions</a></li>
+                <li><a href="business.html" class="nav-item"><i class="fas fa-industry"></i> Business & Manufacturers</a></li>
+                <li><a href="academy.html" class="nav-item"><i class="fas fa-graduation-cap"></i> Training & Academy</a></li>
+                <li><a href="countries.html" class="nav-item"><i class="fas fa-map-marker-alt"></i> Country Offices</a></li>
+                <li><a href="news.html" class="nav-item"><i class="fas fa-newspaper"></i> News & Events</a></li>
+                <li><a href="partners.html" class="nav-item"><i class="fas fa-users"></i> Our Partners</a></li>
+                <li><a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i> About WGIH</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- HERO + NEWS SIDEBAR -->
+        <div class="hero-section-wrapper">
+            <!-- HERO SLIDER -->
+            <div class="hero-section">
+                <div class="hero-slider">
+                    <div class="slide active">
+                        <img src="images/hero-satellite.jpg" alt="Satellite">
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <h1>Global Geospatial<br>for a <span class="highlight">Smarter World</span></h1>
+                            <p>Innovation • Cooperation • Shared Prosperity</p>
+                            <a href="solutions.html" class="cta-button primary">
+                                <i class="fas fa-arrow-right"></i> Explore Our Solutions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide Navigation -->
+                <div class="slide-nav">
+                    <button class="nav-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <!-- Slide Indicators -->
+                <div class="slide-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+            </div>
+
+            <!-- PULSE NEWS TODAY SIDEBAR -->
+            <aside class="news-sidebar">
+                <div class="news-header">
+                    <div class="news-title">
+                        <i class="fas fa-pulse"></i> Pulse News Today
+                    </div>
+                    <a href="news.html" class="more-link">More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="news-list">
+                    <div class="news-item">
+                        <img src="images/news-1.jpg" alt="News">
+                        <div class="news-content">
+                            <div class="news-date">Dec 10 2025</div>
+                            <h4>International Geospatial Conference Opens in Beijing</h4>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <div class="news-item">
+                        <img src="images/news-2.jpg" alt="News">
+                        <div class="news-content">
+                            <div class="news-date">Nov 10 2025</div>
+                            <h4>New Satellite Ground Station Commissioned</h4>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <div class="news-item">
+                        <img src="images/news-3.jpg" alt="News">
+                        <div class="news-content">
+                            <div class="news-date">Nov 08 2025</div>
+                            <h4>Global Partners Explore New Opportunities</h4>
+                        </div>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Featured Event Banner -->
+                <div class="featured-event">
+                    <div class="event-badge">WGIH 2026</div>
+                    <h3>International Summit</h3>
+                    <p>Beijing, China • Nov 22-25, 2026</p>
+                    <a href="event.html?id=summit-2026" class="event-btn"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- CORE SERVICES -->
+        <section class="services-section">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Our Core Services</h2>
+                <a href="solutions.html" class="discover-link">Discover More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <h3>Space & Geospatial Solutions</h3>
+                    <p>From space to society</p>
+                    <a href="solutions.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Business & Manufacturers</h3>
+                    <p>Connect with industry</p>
+                    <a href="business.html" class="service-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Marketplace</h3>
+                    <p>Products & Suppliers</p>
+                    <a href="business.html#marketplace" class="service-btn">Browse <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Training & Academy</h3>
+                    <p>Learn • Grow • Excel</p>
+                    <a href="academy.html" class="service-btn">Apply Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Projects & Partnerships</h3>
+                    <p>Build Together</p>
+                    <a href="business.html#ventures" class="service-btn">Partner <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Country Offices</h3>
+                    <p>Global Network</p>
+                    <a href="countries.html" class="service-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- THREE-COLUMN FEATURED SECTIONS -->
+        <section class="featured-sections">
+            <!-- Global Network: interactive SVG world map with blinking markers
+                 for each country where WGIH / Chinese partners have offices.
+                 Marker x/y use an equirectangular projection matching world-map.svg. -->
+            <div class="featured-card network-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-globe"></i> Our Global Network</h3>
+                    <span class="card-badge">15+ COUNTRIES</span>
+                </div>
+                <div class="card-content">
+                    <div class="world-map">
+                        <img src="images/world-map.svg" alt="WGIH global office network map">
+                        <!-- Each marker blinks; hover reveals the country name tooltip -->
+                        <span class="map-marker hq" style="left:78.6%;top:30.6%" data-country="China (Headquarters)"></span>
+                        <span class="map-marker" style="left:62.5%;top:36.7%" data-country="Saudi Arabia"></span>
+                        <span class="map-marker" style="left:61.1%;top:45.0%" data-country="Ethiopia"></span>
+                        <span class="map-marker" style="left:52.2%;top:45.0%" data-country="Nigeria"></span>
+                        <span class="map-marker" style="left:60.6%;top:49.4%" data-country="Kenya"></span>
+                        <span class="map-marker" style="left:56.7%;top:66.1%" data-country="South Africa"></span>
+                        <span class="map-marker" style="left:58.3%;top:51.1%" data-country="Rwanda"></span>
+                        <span class="map-marker" style="left:49.7%;top:45.6%" data-country="Ghana"></span>
+                        <span class="map-marker" style="left:58.6%;top:35.1%" data-country="Egypt"></span>
+                        <span class="map-marker" style="left:65.0%;top:36.7%" data-country="United Arab Emirates"></span>
+                        <span class="map-marker" style="left:69.4%;top:33.3%" data-country="Pakistan"></span>
+                        <span class="map-marker" style="left:81.6%;top:50.4%" data-country="Indonesia"></span>
+                        <span class="map-marker" style="left:34.7%;top:55.6%" data-country="Brazil"></span>
+                        <span class="map-marker" style="left:59.7%;top:53.6%" data-country="Tanzania"></span>
+                        <span class="map-marker" style="left:57.7%;top:57.3%" data-country="Zambia"></span>
+                    </div>
+                    <p>15+ Countries | 50+ Offices | Worldwide Reach</p>
+                    <a href="countries.html" class="card-btn">View Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Featured Companies: logos auto-slide horizontally (many partners),
+                 each with the company name beneath it. The track is duplicated in
+                 script.js for a seamless infinite loop. -->
+            <div class="featured-card companies-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-trophy"></i> Featured Chinese Companies</h3>
+                    <span class="card-badge premium">Premium</span>
+                </div>
+                <div class="card-content">
+                    <div class="company-carousel">
+                        <div class="company-track">
+                            <figure class="company-item">
+                                <img src="images/huawei-logo.svg" alt="Huawei">
+                                <figcaption>Huawei</figcaption>
+                            </figure>
+                            <figure class="company-item">
+                                <img src="images/dji-logo.svg" alt="DJI">
+                                <figcaption>DJI</figcaption>
+                            </figure>
+                            <figure class="company-item">
+                                <img src="images/catl-logo.svg" alt="CATL">
+                                <figcaption>CATL</figcaption>
+                            </figure>
+                            <figure class="company-item">
+                                <img src="images/byd-logo.svg" alt="BYD">
+                                <figcaption>BYD</figcaption>
+                            </figure>
+                            <figure class="company-item">
+                                <img src="images/zte-logo.svg" alt="ZTE">
+                                <figcaption>ZTE</figcaption>
+                            </figure>
+                            <figure class="company-item">
+                                <img src="images/baidu-logo.svg" alt="Baidu">
+                                <figcaption>Baidu</figcaption>
+                            </figure>
+                            <figure class="company-item">
+                                <img src="images/sinomach-logo.svg" alt="SINOMACH">
+                                <figcaption>SINOMACH</figcaption>
+                            </figure>
+                            <figure class="company-item">
+                                <img src="images/ary-logo.svg" alt="ARY">
+                                <figcaption>ARY</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <p>Leading Technology, Global Opportunities</p>
+                    <a href="business.html" class="card-btn">View Directory <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- International Training: red, blinking announcement badge draws
+                 attention to the fully-sponsored programs. -->
+            <div class="featured-card training-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-book"></i> International Training</h3>
+                    <span class="card-badge announce">
+                        <i class="fas fa-bullhorn"></i> Fully Sponsored Programs Available
+                    </span>
+                </div>
+                <div class="card-content">
+                    <img src="images/training-image.jpg" alt="Training">
+                    <p>Join Global Training &amp; Conferences</p>
+                    <a href="academy.html" class="card-btn">View Programs <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LATEST EVENTS -->
+        <section class="events-section">
+            <div class="section-header">
+                <h3><i class="fas fa-calendar"></i> Latest Events</h3>
+                <a href="news.html#events" class="more-link">More Events <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <img src="images/event-1.jpg" alt="Event">
+                    <div class="event-info">
+                        <span class="event-date">NOW<br>DEC 22 - 25<br>2025</span>
+                        <h4>WGIH 2026 International Summit</h4>
+                        <p>Beijing, China</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="images/event-2.jpg" alt="Event">
+                    <div class="event-info">
+                        <span class="event-date">JAN<br>15 - 17<br>2026</span>
+                        <h4>Regional Geospatial Forum</h4>
+                        <p>Singapore</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="images/event-3.jpg" alt="Event">
+                    <div class="event-info">
+                        <span class="event-date">FEB<br>10 - 12<br>2026</span>
+                        <h4>Tech Innovation Conference</h4>
+                        <p>Dubai, UAE</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MULTIMEDIA GALLERY -->
+        <section class="gallery-section">
+            <div class="section-header">
+                <h3><i class="fas fa-images"></i> Multimedia Gallery</h3>
+                <a href="news.html#gallery" class="more-link">More Photos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery-1.jpg" alt="Gallery">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-2.jpg" alt="Gallery">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-3.jpg" alt="Gallery">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-4.jpg" alt="Gallery">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-5.jpg" alt="Gallery">
+                </div>
+                <div class="gallery-item video">
+                    <img src="images/gallery-6.jpg" alt="Video">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR PARTNERS -->
+        <section class="partners-section">
+            <div class="section-header">
+                <h3><i class="fas fa-handshake"></i> Our Partners</h3>
+                <a href="partners.html" class="more-link">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="images/partner-esa.svg" alt="ESA">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-airbus.svg" alt="Airbus">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-alibaba.svg" alt="Alibaba">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-tencent.svg" alt="Tencent">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-google.svg" alt="Google">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/wgih-logo-white.svg" alt="WGIH">
+                    <h4>WGIH</h4>
+                    <p>Together for a Connected, Innovative and Prosperous World</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="about.html">About WGIH</a></li>
+                    <li><a href="news.html">News & Events</a></li>
+                    <li><a href="about.html#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="solutions.html">Geospatial Solutions</a></li>
+                    <li><a href="academy.html">Training Programs</a></li>
+                    <li><a href="business.html">Marketplace</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h5>Follow Us</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 WGIH. All Rights Reserved | Building a Global Geospatial Community</p>
+        </div>
+    </footer>
+
+    <!-- AI AGENT WIDGET (UI only — no backend yet)
+         Scope, once wired up: answer questions about WGIH services and
+         search site content. Floating launcher opens a chat panel; both are
+         pure front-end here, ready for the assistant API to be plugged in
+         after the DB and admin panel are finalized. -->
+    <button class="ai-agent-launcher" aria-label="Open WGIH assistant">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <div class="ai-agent-panel">
+        <div class="ai-agent-header">
+            <div class="ai-agent-title">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <strong>WGIH Assistant</strong>
+                    <span>Ask about our services</span>
+                </div>
+            </div>
+            <button class="ai-agent-close" aria-label="Close assistant"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div class="ai-agent-messages">
+            <div class="ai-msg bot">
+                Hi! I'm the WGIH assistant. I can help you find services, training programs, or news on this site. (Full AI answers coming soon.)
+            </div>
+        </div>
+
+        <div class="ai-agent-chips">
+            <button type="button" class="ai-agent-chip">Training programs</button>
+            <button type="button" class="ai-agent-chip">Country offices</button>
+            <button type="button" class="ai-agent-chip">Upcoming events</button>
+        </div>
+
+        <form class="ai-agent-form">
+            <input type="text" class="ai-agent-input" placeholder="Type your question..." autocomplete="off">
+            <button type="submit" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

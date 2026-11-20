@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events | WGIH</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-left">
+                <a href="index.html" class="logo-section" style="text-decoration:none;color:inherit;">
+                    <img src="images/wgih-logo.png" alt="WGIH Logo" class="logo">
+                    <div class="logo-text"><div class="org-name">WGIH</div><div class="org-subtitle">World Geospatial<br>Information Home</div></div>
+                </a>
+                <div class="tagline">Connect the World • Empower the Future</div>
+            </div>
+            <div class="header-right">
+                <div class="language-selector"><i class="fas fa-globe"></i>
+                    <select aria-label="Language"><option>English</option><option>中文</option><option>Español</option></select>
+                </div>
+                <div class="auth-buttons"><a href="#" class="login-btn">Login</a><a href="#" class="register-btn">Register</a></div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search WGIH..." data-site-search>
+                    <button type="button" aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <button class="nav-toggle" type="button" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="solutions.html" class="nav-item"><i class="fas fa-satellite"></i> Space & Geospatial Solutions</a></li>
+                <li><a href="business.html" class="nav-item"><i class="fas fa-industry"></i> Business & Manufacturers</a></li>
+                <li><a href="academy.html" class="nav-item"><i class="fas fa-graduation-cap"></i> Training & Academy</a></li>
+                <li><a href="countries.html" class="nav-item"><i class="fas fa-map-marker-alt"></i> Country Offices</a></li>
+                <li><a href="news.html" class="nav-item active"><i class="fas fa-newspaper"></i> News & Events</a></li>
+                <li><a href="partners.html" class="nav-item"><i class="fas fa-users"></i> Our Partners</a></li>
+                <li><a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i> About WGIH</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<main class="page-main">
+    <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1800&q=80')">
+        <div class="wrap">
+            <p class="crumb"><a href="index.html">Home</a> / News & Events</p>
+            <h1>News & Events</h1>
+            <p class="lede">Stay Informed. Get Involved.</p>
+            <p class="lede" style="margin-top:-10px;font-size:14px;">Latest updates, events and international activities.</p>
+            <a class="btn btn-green" href="#room">Explore More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+    <div class="wrap section" data-tabs id="room">
+        <div class="pills">
+            <button class="active" data-tab="latest" type="button">Latest News</button>
+            <button data-tab="events" type="button" id="events">Upcoming Events</button>
+            <button data-tab="photos" type="button" id="gallery">Photo Gallery</button>
+            <button data-tab="videos" type="button">Video Gallery</button>
+        </div>
+        <section class="tab-panel active" data-panel="latest">
+            <div class="news-grid">
+                <div>
+                    <div class="pills" data-filter-group id="news-filters">
+                        <button class="active" data-filter="all" type="button">All</button>
+                        <button data-filter="WGIH Announcements" type="button">Announcements</button>
+                        <button data-filter="Space and Satellite News" type="button">Space</button>
+                        <button data-filter="International Cooperation" type="button">Cooperation</button>
+                        <button data-filter="Business and Industry News" type="button">Business</button>
+                        <button data-filter="Country Office Activities" type="button">Country offices</button>
+                    </div>
+                    <div class="news-list-page" id="article-list"></div>
+                </div>
+                <a class="panel event-feature" href="event.html?id=summit-2026">
+                    <img src="images/event-1.jpg" alt="">
+                    <div>
+                        <div class="date-stamp"><span>DEC</span><b>15</b><span>2025</span></div>
+                        <h3>Global Space & Geospatial Summit</h3>
+                        <p>Beijing, China</p>
+                        <span class="btn btn-yellow">Register Now</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="tab-panel" data-panel="events"><div class="card-grid" id="event-list"></div></section>
+        <section class="tab-panel" data-panel="photos">
+            <div class="gallery-mosaic">
+                <a href="images/gallery-1.jpg"><img src="images/gallery-1.jpg" alt="Gallery"></a>
+                <a href="images/gallery-2.jpg"><img src="images/gallery-2.jpg" alt="Gallery"></a>
+                <a href="images/gallery-3.jpg"><img src="images/gallery-3.jpg" alt="Gallery"></a>
+                <a href="images/gallery-4.jpg"><img src="images/gallery-4.jpg" alt="Gallery"></a>
+                <a href="images/gallery-5.jpg"><img src="images/gallery-5.jpg" alt="Gallery"></a>
+                <a href="images/gallery-6.jpg"><img src="images/gallery-6.jpg" alt="Gallery"></a>
+                <a href="images/news-1.jpg"><img src="images/news-1.jpg" alt="News"></a>
+                <a href="images/training-image.jpg"><img src="images/training-image.jpg" alt="Training"></a>
+            </div>
+        </section>
+        <section class="tab-panel" data-panel="videos">
+            <div class="card-grid">
+                <article class="panel"><h3>Summit floor</h3><p>Video slot for a confirmed recording. The play control is visual in this prototype.</p><a class="btn btn-navy" href="images/gallery-6.jpg">View still</a></article>
+                <article class="panel"><h3>Factory walkthrough</h3><p>Reserved for a manufacturer virtual tour once a real listing is approved.</p></article>
+                <article class="panel"><h3>Training classroom</h3><p>Reserved for an academy highlight film.</p></article>
+            </div>
+        </section>
+        <p class="note" style="margin:18px 0 32px;">Publications and reports will sit in this newsroom when official files are available. Sample stories above are layout content only.</p>
+    </div>
+</main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section"><div class="footer-logo"><img src="images/wgih-logo-white.svg" alt="WGIH"><h4>WGIH</h4><p>Together for a Connected, Innovative and Prosperous World</p></div></div>
+            <div class="footer-section"><h5>Quick Links</h5><ul><li><a href="about.html">About WGIH</a></li><li><a href="news.html">News & Events</a></li><li><a href="about.html#contact">Contact Us</a></li></ul></div>
+            <div class="footer-section"><h5>Services</h5><ul><li><a href="solutions.html">Geospatial Solutions</a></li><li><a href="academy.html">Training Programs</a></li><li><a href="business.html">Marketplace</a></li></ul></div>
+            <div class="footer-section"><h5>Follow Us</h5><div class="social-links"><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="#" aria-label="X"><i class="fab fa-twitter"></i></a><a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 WGIH. All Rights Reserved | Building a Global Geospatial Community</p></div>
+    </footer>
+    <script src="content.js"></script><script src="pages.js"></script><script src="news-boot.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space & Geospatial Solutions | WGIH</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-left">
+                <a href="index.html" class="logo-section" style="text-decoration:none;color:inherit;">
+                    <img src="images/wgih-logo.png" alt="WGIH Logo" class="logo">
+                    <div class="logo-text"><div class="org-name">WGIH</div><div class="org-subtitle">World Geospatial<br>Information Home</div></div>
+                </a>
+                <div class="tagline">Connect the World • Empower the Future</div>
+            </div>
+            <div class="header-right">
+                <div class="language-selector"><i class="fas fa-globe"></i>
+                    <select aria-label="Language"><option>English</option><option>中文</option><option>Español</option></select>
+                </div>
+                <div class="auth-buttons"><a href="#" class="login-btn">Login</a><a href="#" class="register-btn">Register</a></div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search WGIH..." data-site-search>
+                    <button type="button" aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <button class="nav-toggle" type="button" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="solutions.html" class="nav-item active"><i class="fas fa-satellite"></i> Space & Geospatial Solutions</a></li>
+                <li><a href="business.html" class="nav-item"><i class="fas fa-industry"></i> Business & Manufacturers</a></li>
+                <li><a href="academy.html" class="nav-item"><i class="fas fa-graduation-cap"></i> Training & Academy</a></li>
+                <li><a href="countries.html" class="nav-item"><i class="fas fa-map-marker-alt"></i> Country Offices</a></li>
+                <li><a href="news.html" class="nav-item"><i class="fas fa-newspaper"></i> News & Events</a></li>
+                <li><a href="partners.html" class="nav-item"><i class="fas fa-users"></i> Our Partners</a></li>
+                <li><a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i> About WGIH</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<main class="page-main">
+    <section class="page-hero video-hero" style="background-image:url('images/hero-satellite.jpg')">
+        <video class="hero-video" autoplay muted loop playsinline poster="images/hero-satellite.jpg">
+            <source src="images/solutions-hero.mp4" type="video/mp4">
+        </video>
+        <div class="geo-sweep" aria-hidden="true"></div>
+        <div class="wrap">
+            <p class="crumb"><a href="index.html">Home</a> / Space & Geospatial Solutions</p>
+            <h1>Space & Geospatial Solutions</h1>
+            <p class="lede">Advanced Technology. Real-World Applications.</p>
+            <a class="btn btn-green" href="#services">Explore Solutions <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+    <div class="wrap section" data-tabs>
+        <div class="pills" id="services">
+            <button class="active" data-tab="services" type="button">Services</button>
+            <button data-tab="data" type="button">Geospatial Data</button>
+            <button data-tab="solutions" type="button">Solutions</button>
+            <button data-tab="cases" type="button">Case Studies</button>
+        </div>
+        <section class="tab-panel active" data-panel="services">
+            <h2><i class="fas fa-satellite"></i> Our Key Services</h2>
+            <p class="panel-lede">From orbit to the field — core capabilities WGIH coordinates for governments, operators and communities.</p>
+            <div class="shot-grid">
+                <a class="shot" href="solution.html?id=satellite"><img src="images/hero-satellite.jpg" alt=""><span>Satellite & Remote Sensing</span></a>
+                <a class="shot" href="solution.html?id=surveying"><img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=700&q=80" alt=""><span>GIS & Mapping Services</span></a>
+                <a class="shot" href="solution.html?id=telecom"><img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=700&q=80" alt=""><span>GNSS & Positioning</span></a>
+                <a class="shot" href="solution.html?id=disaster"><img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=700&q=80" alt=""><span>Disaster Monitoring</span></a>
+                <a class="shot" href="solution.html?id=environment"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80" alt=""><span>Environmental Monitoring</span></a>
+            </div>
+            <p style="margin:10px 0 18px;text-align:right;"><a href="#catalog">View All Services</a></p>
+            <h2>Featured Applications</h2>
+            <div class="app-grid">
+                <a class="shot" href="solution.html?id=disaster"><img src="images/gallery-1.jpg" alt=""><span>Disaster Management</span></a>
+                <a class="shot" href="solution.html?id=agriculture"><img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=700&q=80" alt=""><span>Smart Agriculture</span></a>
+                <a class="shot" href="solution.html?id=mining"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=700&q=80" alt=""><span>Mining & Resources</span></a>
+                <a class="shot" href="solution.html?id=urban"><img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=700&q=80" alt=""><span>Urban Planning</span></a>
+                <a class="shot" href="solution.html?id=water"><img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=700&q=80" alt=""><span>Water Resources</span></a>
+            </div>
+        </section>
+        <section class="tab-panel" data-panel="data">
+            <h2>Geospatial Data</h2>
+            <div class="card-grid">
+                <article class="panel"><h3>Imagery</h3><p>Optical and radar satellite scenes, aerial photos and drone captures for base maps and change detection.</p></article>
+                <article class="panel"><h3>Terrain & climate</h3><p>Elevation, rivers, rainfall and coastlines used in flood, farm and infrastructure work.</p></article>
+                <article class="panel"><h3>Ground truth</h3><p>Survey control, field observations and sensor feeds that keep maps honest.</p></article>
+            </div>
+        </section>
+        <section class="tab-panel" data-panel="solutions" id="catalog">
+            <h2>Solutions by sector</h2>
+            <p class="note">Each card opens a detail page: the problem, the workflow, data, software, hardware, outputs and a request button. Manufacturer brands are kept off these technical pages.</p>
+            <div class="card-grid" id="solution-catalog"></div>
+        </section>
+        <section class="tab-panel" data-panel="cases">
+            <h2>Case Studies</h2>
+            <div class="card-grid">
+                <a class="panel" href="article.html?id=addis-demo"><h3>Addis ground-station demonstration</h3><p>Sample country-office story. Open the article layout.</p></a>
+                <a class="panel" href="solution.html?id=disaster"><h3>Basin early warning</h3><p>How imagery, terrain, weather and sensors sit on one dashboard.</p></a>
+                <a class="panel" href="solution.html?id=agriculture"><h3>Field-scale crop advice</h3><p>From a national picture down to extension officers.</p></a>
+            </div>
+        </section>
+    </div>
+</main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section"><div class="footer-logo"><img src="images/wgih-logo-white.svg" alt="WGIH"><h4>WGIH</h4><p>Together for a Connected, Innovative and Prosperous World</p></div></div>
+            <div class="footer-section"><h5>Quick Links</h5><ul><li><a href="about.html">About WGIH</a></li><li><a href="news.html">News & Events</a></li><li><a href="about.html#contact">Contact Us</a></li></ul></div>
+            <div class="footer-section"><h5>Services</h5><ul><li><a href="solutions.html">Geospatial Solutions</a></li><li><a href="academy.html">Training Programs</a></li><li><a href="business.html">Marketplace</a></li></ul></div>
+            <div class="footer-section"><h5>Follow Us</h5><div class="social-links"><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="#" aria-label="X"><i class="fab fa-twitter"></i></a><a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 WGIH. All Rights Reserved | Building a Global Geospatial Community</p></div>
+    </footer>
+    <script src="content.js"></script><script src="pages.js"></script><script>document.getElementById("solution-catalog").innerHTML=WGIH.solutions.filter(s=>s.group==="solution").map(s=>`<a class="panel" href="solution.html?id=${s.id}"><h3>${s.title}</h3><p>${s.sector}</p></a>`).join("");</script>
+</body>
+</html>
