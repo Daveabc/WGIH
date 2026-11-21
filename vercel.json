@@ -1,28 +1,4 @@
 {
-  "version": 2,
   "buildCommand": null,
-  "outputDirectory": ".",
-  "public": true,
-  "ignore": ["WGIH/**", ".github/**", "_gen-pages.js", "_serve.js", "*.log"],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/$path.html"
-    }
-  ]
+  "outputDirectory": "."
 }
