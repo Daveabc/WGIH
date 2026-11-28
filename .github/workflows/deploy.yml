@@ -1,0 +1,44 @@
+name: Deploy to wgih.net
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy files via rsync over SSH
+        uses: easingthemes/ssh-deploy@v5
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          ARGS: "-avz --delete"
+          SOURCE: "./"
+          REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
+          REMOTE_USER: ${{ secrets.DEPLOY_USER }}
+          TARGET: "/home/admin/wgih-staging/"
+          EXCLUDE: "_serve.js, _gen-pages.js, .git, .github, node_modules, vercel.json"
+
+      - name: Promote staging to production and reload Nginx
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            # Backup production
+            mkdir -p ~/backups
+            cp -a /var/www/wgih ~/backups/wgih-$(date +%Y%m%d-%H%M%S)
+            # Sync staging to production (excluding .git)
+            rsync -a --delete \
+              --exclude='.git' --exclude='.github' \
+              ~/wgih-staging/ /var/www/wgih/
+            # Fix permissions
+            sudo chown -R admin:nginx /var/www/wgih
+            sudo chmod -R 755 /var/www/wgih
+            # Reload Nginx
+            sudo systemctl reload nginx
+            echo "Deployed commit: $(git -C ~/wgih-staging log --oneline -1)"
