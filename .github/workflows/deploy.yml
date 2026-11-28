@@ -23,6 +23,13 @@ jobs:
           printf '%s\n' '43.103.42.85 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBGx15E9hXMeljxo3tkPaX2eia3zym5EF5Nb9rV73Lph' >> ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
 
+      - name: Test SSH connectivity to wgih-ci
+        run: |
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes \
+            -o ConnectTimeout=15 -v \
+            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} \
+            "echo SSH-connection-test-ok && id" 2>&1 | tail -20
+
       - name: Sync files to staging via rsync
         run: |
           rsync -avz --delete \
