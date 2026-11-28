@@ -41,6 +41,8 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
+          # Pinned ED25519 host key fingerprint — prevents MITM on this step
+          fingerprint: "SHA256:Eah+HCsEH8jcA/o5svUX04ts8djeTtwQTo1ymnAyn8Y"
           script: |
             set -e
             mkdir -p ~/backups
