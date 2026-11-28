@@ -12,17 +12,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup SSH with host key verification
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
           echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          # Pin the server host key — prevents MITM attacks
-          cat >> ~/.ssh/known_hosts << 'KNOWN'
-          |1|9D38rIxsgrOoXngy35pfLo8uGgU=|3sL6osKefY1Yky7wqXQ7JYquUDc= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM1rPFLKP+MXWRVxf37ShfnSeKPtFw+vJWuiBBYxOe5zjgVK0jx5xQk5jawSRoncgQsoApvTDs9V3y2s/VFFmBw=
-          |1|IH5pER2WXcVl7Bkr1zn7WJRteoU=|beUPamssZfpZv6EEujU0lnK/CBI= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBGx15E9hXMeljxo3tkPaX2eia3zym5EF5Nb9rV73Lph
-          KNOWN
+          # Write pinned host keys without indentation (SSH is whitespace-sensitive)
+          printf '%s\n' '43.103.42.85 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM1rPFLKP+MXWRVxf37ShfnSeKPtFw+vJWuiBBYxOe5zjgVK0jx5xQk5jawSRoncgQsoApvTDs9V3y2s/VFFmBw=' >> ~/.ssh/known_hosts
+          printf '%s\n' '43.103.42.85 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBGx15E9hXMeljxo3tkPaX2eia3zym5EF5Nb9rV73Lph' >> ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
 
       - name: Sync files to staging via rsync
@@ -38,18 +36,17 @@ jobs:
             ./ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/wgih-staging/
 
       - name: Promote staging to production and reload Nginx
-        run: |
-          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes \
-            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'REMOTE'
-          set -e
-          # Atomic backup of production
-          mkdir -p ~/backups
-          cp -a /var/www/wgih ~/backups/wgih-$(date +%Y%m%d-%H%M%S)
-          # Sync staging → production
-          rsync -a --delete \
-            --exclude='.git' --exclude='.github' \
-            /var/www/wgih-staging/ /var/www/wgih/
-          # Reload Nginx
-          sudo systemctl reload nginx
-          echo "✓ Deployed: $(git -C /var/www/wgih-staging log --oneline -1 2>/dev/null || echo 'no git')"
-          REMOTE
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -e
+            mkdir -p ~/backups
+            cp -a /var/www/wgih ~/backups/wgih-$(date +%Y%m%d-%H%M%S)
+            rsync -a --delete \
+              --exclude='.git' --exclude='.github' \
+              /var/www/wgih-staging/ /var/www/wgih/
+            sudo systemctl reload nginx
+            echo "Deployed: $(git -C /var/www/wgih-staging log --oneline -1 2>/dev/null || echo ok)"
